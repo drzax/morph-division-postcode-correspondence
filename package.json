@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "cheerio": "latest",
+    "clone": "^1.0.2",
+    "queue-async": "^1.2.1",
+    "request": "latest",
+    "sqlite3": "latest"
+  },
+  "name": "morph-mp-first-speech",
+  "description": "A fairly flaky scraper to get the first parliamentary speech for current Australian parliamentarians.",
+  "version": "1.0.1",
+  "main": "scraper.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drzax/morph-mp-first-speech.git"
+  },
+  "keywords": [
+    "scraper",
+    "data",
+    "politics",
+    "australia"
+  ],
+  "author": "Simon Elvery",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drzax/morph-mp-first-speech/issues"
+  },
+  "homepage": "https://github.com/drzax/morph-mp-first-speech#readme"
+}

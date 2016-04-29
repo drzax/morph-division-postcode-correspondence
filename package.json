@@ -6,9 +6,9 @@
     "request": "latest",
     "sqlite3": "latest"
   },
-  "name": "morph-mp-first-speech",
-  "description": "A fairly flaky scraper to get the first parliamentary speech for current Australian parliamentarians.",
-  "version": "1.0.1",
+  "name": "morph-division-postcode-correspondence",
+  "description": "Scrapes AEC for electorate/postcode mapping.",
+  "version": "1.0.0",
   "main": "scraper.js",
   "devDependencies": {},
   "scripts": {
@@ -16,18 +16,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drzax/morph-mp-first-speech.git"
+    "url": "git+https://github.com/drzax/morph-division-postcode-correspondence.git"
   },
   "keywords": [
     "scraper",
     "data",
     "politics",
-    "australia"
+    "australia",
+    "electorates",
+    "postcodes"
   ],
+  "engines": {
+    "node": "5.8.0",
+    "npm": "3.8.2"
+  },
   "author": "Simon Elvery",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/drzax/morph-mp-first-speech/issues"
+    "url": "https://github.com/drzax/morph-division-postcode-correspondence/issues"
   },
-  "homepage": "https://github.com/drzax/morph-mp-first-speech#readme"
+  "homepage": "https://github.com/drzax/morph-division-postcode-correspondence#readme"
 }

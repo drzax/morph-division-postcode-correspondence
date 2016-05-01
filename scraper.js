@@ -1,4 +1,6 @@
 // This is a template for a Node.js scraper on morph.io (https://morph.io)
+var fs = require('fs');
+var path = require('path');
 var cheerio = require("cheerio");
 var request = require("request");
 var sqlite3 = require("sqlite3").verbose();
@@ -12,14 +14,14 @@ var fetched = [];
 const BASE = 'http://apps.aec.gov.au/eSearch/';
 const LISTING = BASE + 'LocalitySearchResults.aspx';
 
+// Delete existing data
+try {
+	fs.unlinkSync(path.join(__dirname, 'data.sqlite'));
+} catch(e) {}
+
 q = queue(10);
 
 get(LISTING).then(processListing, handleErr);
-
-function handleErr(err) {
-	console.log(err);
-	process.exit(1);
-}
 
 db = new Promise((resolve, reject) => {
 		var conn = new sqlite3.Database("data.sqlite");
@@ -144,4 +146,9 @@ function get(url) {
 			});
 		});
 	})).then(cheerio.load, handleErr);
+}
+
+function handleErr(err) {
+	console.log(err);
+	process.exit(1);
 }
